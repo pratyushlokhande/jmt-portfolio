@@ -1,0 +1,163 @@
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+
+// Variables
+$prim-color: #7f133f;
+// Initialisation
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+.h-contact {
+  position: relative;
+  z-index: 10000;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $prim-color;
+  color: #fff;
+  font-size: 1.75rem;
+  padding: 0.5rem 0;
+  span {
+    font-weight: bold;
+  }
+}
+
+#navbar {
+  height: 6rem;
+  padding: 0 2rem;
+  box-shadow: 3px 3px 25px #000;
+
+  b {
+    color: $prim-color;
+    font-size: 1.7rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 1rem 0;
+
+    b {
+      font-size: 1.3rem;
+    }
+  }
+  #navbarNavDropdown {
+    // background-color: #000;
+    justify-content: flex-end;
+
+    ul {
+      gap: 5rem;
+
+      a {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      @media screen and (max-width: 768px) {
+        gap: 0;
+
+        a {
+          font-size: 1rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+#home {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+
+  @media screen and (max-width: 768px) {
+    height: 40vh;
+  }
+
+  .home-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      filter: opacity(0.6);
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5vw;
+      color: #fff;
+    }
+  }
+}
+
+#projects {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    border: none;
+    @media screen and (max-width: 768px) {
+      width: 100vw;
+    }
+    img {
+      width: 25rem;
+      height: 25rem;
+      object-fit: cover;
+      object-position: center;
+      transition: all 250ms ease;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: $prim-color;
+      margin-top: 0.5rem;
+    }
+
+    &:hover img {
+      box-shadow: 2px 2px 15px #cf286b, -2px -2px 15px #cf286b;
+    }
+  }
+}
+
+footer {
+  background-color: #3a3a3a;
+  a {
+    text-decoration: none;
+  }
+}
