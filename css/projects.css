@@ -15,6 +15,15 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.navbar-brand img {
+  width: 5rem;
+  height: 5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .h-contact {
   position: relative;
   z-index: 10000;
@@ -37,6 +46,16 @@ body {
 
 .h-contact span {
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .h-contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1rem;
+  }
 }
 
 #navbar {
